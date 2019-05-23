@@ -10,6 +10,7 @@
 		2CF30D6D2295EAD5008B335C /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF30D6C2295EAD5008B335C /* DropdownTableViewCell.swift */; };
 		2CF30D6F2296033A008B335C /* DataFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF30D6E2296033A008B335C /* DataFromServer.swift */; };
 		2CF30D71229604B8008B335C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF30D70229604B8008B335C /* MapView.swift */; };
+		2CF30D732296AD27008B335C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2CF30D722296AD27008B335C /* .gitignore */; };
 		2CF7754F2295818C000C5773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7754E2295818C000C5773 /* AppDelegate.swift */; };
 		2CF775562295819D000C5773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF775552295819D000C5773 /* Assets.xcassets */; };
 		2CF775592295819D000C5773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF775572295819D000C5773 /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 		2CF30D6C2295EAD5008B335C /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
 		2CF30D6E2296033A008B335C /* DataFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromServer.swift; sourceTree = "<group>"; };
 		2CF30D70229604B8008B335C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		2CF30D722296AD27008B335C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2CF7754B2295818C000C5773 /* WeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF7754E2295818C000C5773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CF775552295819D000C5773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		2CF775422295818C000C5773 = {
 			isa = PBXGroup;
 			children = (
+				2CF30D722296AD27008B335C /* .gitignore */,
 				2CF7754D2295818C000C5773 /* WeatherMap */,
 				2CF7754C2295818C000C5773 /* Products */,
 				3462C879CDB1F8124F744BCE /* Pods */,
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF775592295819D000C5773 /* LaunchScreen.storyboard in Resources */,
+				2CF30D732296AD27008B335C /* .gitignore in Resources */,
 				2CF775562295819D000C5773 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

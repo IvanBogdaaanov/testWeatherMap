@@ -39,6 +39,6 @@ extension MapView: GMSMapViewDelegate {
         markerOnMap.position = coordinate
         markerOnMap.map = self
         
-        let url = URL(string: <#T##String#>)
+//        let url = URL(string: <#T##String#>)
     }
 }
