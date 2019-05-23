@@ -15,8 +15,8 @@ class MapView: GMSMapView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-            delegate = self
-            }
+//            delegate = self
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -30,15 +30,4 @@ class MapView: GMSMapView {
         }
     }
 
-}
-extension MapView: GMSMapViewDelegate {
-    
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        self.clear()
-        let markerOnMap = GMSMarker()
-        markerOnMap.position = coordinate
-        markerOnMap.map = self
-        
-//        let url = URL(string: <#T##String#>)
-    }
 }

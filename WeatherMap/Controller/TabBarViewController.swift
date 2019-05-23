@@ -22,8 +22,10 @@ class TabBarViewController: UITabBarController {
         
         MapVC.tabBarItem.image = MapImage
         MapVC.title = "Карта"
+        MapVC.tabBarItem.tag = 0
         ListVC.title = "Cписок"
         ListVC.tabBarItem.image = ListImage
+        ListVC.tabBarItem.tag = 1
         
         setViewControllers([MapVC, ListVC], animated: false)
     }
@@ -33,4 +35,14 @@ class TabBarViewController: UITabBarController {
         navigationController?.isNavigationBarHidden = true
         
     }
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        switch item.tag {
+        case 1:
+            guard let data = MapVC.dataForTable else {return}
+            ListVC.dataWeather = data
+            
+        default: break
+        }
+    }
 }
+

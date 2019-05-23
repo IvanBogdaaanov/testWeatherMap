@@ -11,6 +11,8 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
     
+    var dataForTable: Weather?
+    
     let Map = MapView()
     let locationManager = CLLocationManager()
     
@@ -19,11 +21,10 @@ class MapViewController: UIViewController {
     
         view.backgroundColor = .white
         Map.sizeMap(VC: self)
-        
+        Map.delegate = self
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
-
     }
 }
 extension MapViewController: CLLocationManagerDelegate {
@@ -52,3 +53,32 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 
 }
+
+extension MapViewController: GMSMapViewDelegate {
+    
+
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        Map.clear()
+        let markerOnMap = GMSMarker()
+        markerOnMap.position = coordinate
+        markerOnMap.map = Map
+        
+        getWeather(coordinate: coordinate) { (arrayObject) in
+            let newArrayObject = arrayObject as! Weather
+            self.dataForTable = newArrayObject
+            
+            for counter in 0..<20 {
+                getMarkArea(position: newArrayObject.list[counter].coord,
+                            city: newArrayObject.list[counter].name,
+                            mapAdd: self.Map,
+                            temp: newArrayObject.list[counter].main.temp,
+                            pressure: newArrayObject.list[counter].main.pressure,
+                            humidity: newArrayObject.list[counter].main.humidity,
+                            windSpeed:newArrayObject.list[counter].wind.speed)
+            }
+        }
+    }
+}
+
+
