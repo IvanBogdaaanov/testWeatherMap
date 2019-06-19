@@ -51,7 +51,6 @@ class DropdownTableViewCell: UITableViewCell {
         windSpeed.snp.makeConstraints { (makers) in
             makers.left.equalTo(10)
             makers.top.equalTo(Humidity.snp.bottom).offset(20)
-//            makers.bottom.equalTo(-10)
         }
     }
     
